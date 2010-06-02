@@ -5,12 +5,13 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "git_cleaner"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{Automatic cleanup of Git branches– with Lighthouse integration!}
+    gem.description = %Q{Git Cleaner allows you to easily remove stale branches based on a number of factors, such as date modified, branch name, and even Lighthouse ticket state.}
     gem.email = "lcaplan@onehub.com"
     gem.homepage = "http://github.com/onehub/git_cleaner"
     gem.authors = ["Leigh Caplan"]
     gem.add_development_dependency "rspec", ">= 1.2.9"
+    gem.add_dependency 'lighthouse-api', '>= 1.1.0'
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new

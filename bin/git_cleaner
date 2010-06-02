@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+require File.expand_path(File.dirname(__FILE__) + "/../lib/git_cleaner")
+
+begin
+  GitCleaner.new.cleanup
+rescue Interrupt => i
+  puts "\rThank you for using Git Cleaner!"
+rescue Exception => e
+  puts "Quitting Git Cleaner due to error: #{e.message}"
+  puts e.backtrace
+end
